@@ -7,12 +7,12 @@ import requests
 #def unquote(value):
 #    return unquote(value)
 #make the search
-def doSearch(query, type,lang = "pt-BR", domain="com",num=40):
+def doSearch(query, type,lang = "pt-BR", domain="com",num=30):
 	url = "http://www.google."+domain+"/search"
 	#url = "http://www.google."+domain+
 	#-inurl:htm -inurl:html intitle:"index of" "Last modified" mp3 
 	#"?intitle:index?%s %s last modified -html -wallywashis"
-	parameters = {'q':"%s -inurl:htm -inurl:html -inurl:xhtml intitle:index  %s -wallywashis -mmnt.net -unknownsecret -mp3brainz"%(type,query.encode('utf8')),'hl':lang,'num':num}
+	parameters = {'q':"%s -inurl:htm -inurl:html intitle:index  %s -wallywashis -mmnt.net -unknownsecret"%(type,query.encode('utf8')),'hl':lang,'num':num}
 	#parameters = {'q':query,'hl':lang}
 	print parameters["q"]
 	result = requests.get(url,params = parameters)
@@ -41,15 +41,7 @@ def doSearch(query, type,lang = "pt-BR", domain="com",num=40):
 			.replace("%7D","}")
 			.replace("%252F","/")
 			.replace("%f3","�")
-			.replace("%2F","/")
-            .replace("%C3%A3","ã")
-            .replace("%E1%BA%BD","ẽ")          
-            .replace("%C4%A9","ĩ")          
-            .replace("%C3%B5","õ")
-            .replace("%C5%A9","ũ")          
-            .replace("%E1%BB%B9","ỹ"))
-        
-        
+			.replace("%2F","/"))
 		#results.append(url.next['href'].encode('latin1')[7:].split('&')[0])
 		#print url.next['href'].encode('latin1')[7:].split('&')[0].replace("%2520","%20")
 		#print url.next['href'].encode('latin1')[7:]
