@@ -1,5 +1,5 @@
-Para Rodar Localmente a iskrillex!
-==================================
+Para Rodar Localmente a IsKema!
+===============================
 
 Siga as instrução dos links abaixo;
 Nota: não é necessario ir para a proxima pagina, ou seja para cada etapa completada pule para o proximo
@@ -75,15 +75,23 @@ Entre na Pasta onde se encontra o projeto Iskrillex e inicie o processo com o Vi
  
  Então, Ative o  virtualenv no projeto:
  
-Se estiver usando  Windows, rode o seguinte comando:
+ pip install virtualenv 
+ ======================
+ 
+ virtualenv ENV
+ ==============
 
+Se estiver usando  Windows, rode o seguinte comando:
+ENV\Scripts\activate.bat ou
+========================
 venv\Scripts\activate.bat
 ==========================
 
 Se não estiver usando  Window, rode o seguinte command:
-
+source ENV/bin/activate ou 
+=======================
 source venv/bin/activate
-==========================
+========================
 
 Nesse momento a sua pasta esta isolado do sistema e agora podemos instalar as dependencia do projeto; Com o comando:
 
