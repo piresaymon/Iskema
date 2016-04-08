@@ -1,3 +1,3 @@
 IsKema
 ======
-Aplicação de Busca de arquivos em  Diretorios Publicos(Music,Video)
+Aplicação de Busca de arquivos de audio em  Diretorios Publicos
