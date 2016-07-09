@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<TITLE>IsKema o Aplicativo IsKrillex no Facebook</TITLE>
+<TITLE>IsKema Seja Bem Vindo</TITLE>
     <META NAME="DESCRIPTION" CONTENT="ótima ferramenta, sempre acho o que preciso.. sem cadastros, sem protetor de links, sem espera, nos variados formatos (ISO, RAR, EXE e etc..)download direto!!">
     <META NAME="ABSTRACT" CONTENT="O mecanismo de pesquisa é bem simples,.">
-    <META NAME="KEYWORDS" CONTENT="Há casos nos quais você pode reproduzir o material antes de realizar o download.  Leia mais em: http://www.baixaki.com.br/download/iskrillex.htm#ixzz2apgqp9XL ◄▬C▬U▬R▬T▬A▬M▬.">
     <META NAME="ROBOT" CONTENT="All">
     <META NAME="RATING" CONTENT="general">
     <META NAME="DISTRIBUTION" CONTENT="global">
     <META http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name ="description" content ="Ótima ferramenta, sempre acho o que preciso.. sem cadastros, sem protetor de links, sem espera, nos variados formatos (ISO, RAR, EXE e etc..)download direto!!">
      <meta name="ABSTRACT" content ="O mecanismo de pesquisa é bem simples,.">
-     <meta name="KEYWORDS" CONTENT="Downloads, musica, videos, skrillex, iskema, facebook, piratebay, mega ">
+     <meta name="KEYWORDS" CONTENT="Downloads, musica, videos, iskema, facebook, piratebay, mega ">
      <meta name="ROBOT" content ="All">
      <meta name="RATING" content ="general">
      <meta name="DISTRIBUTION" content ="global">
@@ -53,7 +52,7 @@
      <link rel='stylesheet' href='../../static/css/styles.css'>
      <link rel="stylesheet" href="../../static/css/bootstrap.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.0.0/normalize.min.css">
-     <link rel="stylesheet" href="../../static/css/animate.css">
+     
 
      <!-- JS -->
      <script src="../../static/js/script.js"></script>
@@ -66,76 +65,17 @@
  <!--Detectando adBlock ou similares  -->
  <script src="../../static/js/advertisement.js" type="text/javascript"></script>
 
- <!-- Scripts de propaganda -->
-<script async="true" type="text/javascript" src="http://carnage1301.spider.ad?id=38473"></script>
- <!-- fim dos Scripts de propaganda -->
- <link rel="icon" type="image/png" href="../../static/img/seal.png"/>
 
-              <script type="text/javascript">if(document.getElementById("ad_block") == undefined) {//Aqui vai a tratativa para solicitar liberação, etc
-                alert("Por Favor! Desative o ADBLOCK em nosso Aplicativo! Para ajudar a manter-lo on-Line @^@");//Nem pense em esconder conteúdo! :O
-              }</script>
+            <link rel="icon" type="image/png" href="../../static/img/seal.png"/>
 
+    <script type="text/javascript">
+        if(document.getElementById("ad_block") == undefined) {//Aqui vai a tratativa para solicitar liberação, etc
+            alert("Por Favor! Desative o ADBLOCK em nosso Aplicativo! Para ajudar a manter-lo on-Line @^@");//Nem pense em esconder conteúdo! :O
+        }
+    </script>          
 
 </head>
 <body>
-  <script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '648335971972552',
-      xfbml      : true,
-      version    : 'v2.5'
-    });
-
-    // Place following code after FB.init call.
-
-function onLogin(response) {
-  if (response.status == 'connected') {
-    FB.api('/me?fields=first_name', function(data) {
-      var welcomeBlock = document.getElementById('fb-welcome');
-      welcomeBlock.innerHTML = 'Olá, ' + data.first_name + '!' + ' Seja Bem Vindo! Caso Queria Outros Formatos '
-      + '<br>' +' Como Arquivos, Videos e Jogos entre no Site Oficial no Link do Menu';
-    });
-  }
-}
-
-FB.getLoginStatus(function(response) {
-  if (response.status === 'connected') {
-    // the user is logged in and has authenticated your
-    // app, and response.authResponse supplies
-    // the user's ID, a valid access token, a signed
-    // request, and the time the access token
-    // and signed request each expire
-    var uid = response.authResponse.userID;
-    var accessToken = response.authResponse.accessToken;
-  } else if (response.status === 'not_authorized') {
-    // the user is logged in to Facebook,
-    // but has not authenticated your app
-  } else {
-    // the user isn't logged in to Facebook.
-  }
- });
-FB.getLoginStatus(function(response) {
-  // Check login status on load, and if the user is
-  // already logged in, go directly to the welcome message.
-  if (response.status == 'connected') {
-    onLogin(response);
-  } else {
-    // Otherwise, show Login dialog first.
-    FB.login(function(response) {
-      onLogin(response);
-    }, {scope: 'user_friends, email'});
-  }
-});
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
-
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
 
@@ -157,18 +97,13 @@ FB.getLoginStatus(function(response) {
     <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
             <li>
-              <a id="sd" href="mailto:piresaymon@gmail.com" target="_blank"><i class="send outline icon big animated infinite pulse"></i> CONTATO </a>
+              <a id="sd" href="mailto:piresaymon@gmail.com" target="_blank"><i class="send outline icon big"></i> CONTATO </a>
             </li>
             <li>
-              <a id="sr" href="http://jdownloader.org/pt/download/offline" target="_blank"><i class="angellist icon big animated infinite swing"></i>
+              <a id="sr" href="http://jdownloader.org/pt/download/offline" target="_blank"><i class="angellist icon big"></i>
                         SOFTWARE RECOMENDADO </a>
             </li>
-            <li>
-              <a id="wm" href="https://github.com/saymonpires/Iskema" target="_blank"><i class="code outline icon big animated infinite rubberBand"></i> CÓDIGO FONTE</a>
-            </li>
-            <li>
-              <a id="wm" href="http://iskrillex.com" target="_blank"><i class="code linkify icon big animated infinite pulse"></i> SITE OFICIAL</a>
-            </li>
+            
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li>
@@ -187,25 +122,12 @@ FB.getLoginStatus(function(response) {
           <div class="container-fluid pagination-centered">
               <div class="row-fluid">
                   <div class="span12 spacetop">
-                    <h4 id="fb-welcome"></h4>
+                    
                        <figure class="foto-logo animated flipInY img-responsive">
                           <a href="http://iskema.herokuapp.com">
                               <img src="../../static/img/logo.png" alt="Logo Iskema" title="Logo IsKema"/>
                           </a>
                        </figure>
-
-                      <!-- INICIO FORMULARIO BOTAO PAGSEGURO -->
-                      <form action="https://pagseguro.uol.com.br/checkout/v2/donation.html" method="post">
-                          <!-- NÃO EDITE OS COMANDOS DAS LINHAS ABAIXO -->
-                          <input type="hidden" name="currency" value="BRL"/>
-                          <input type="hidden" name="receiverEmail" value="piresaymon@gmail.com"/>
-                          <input type="image"
-                                 src="https://p.simg.uol.com.br/out/pagseguro/i/botoes/doacoes/120x53-doar-preto.gif"
-                                 name="submit"
-                                 alt="Ajude o Iskema A Crescer! Pague com PagSeguro - é rápido, grátis e seguro! "/>
-                      </form>
-                      <!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
-
                       <form class="form-horizontal" action="." method="post" id="searchForm">
                           <div class="btn-group">
                               <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
@@ -357,15 +279,12 @@ FB.getLoginStatus(function(response) {
                                   </li>
                               </ul>
                           </div>
-                          <input type="search" name="q" id="q" placeholder="Buscas Apenas por Musicas" class="input-xxlarge" autofocus=""/>
-                          <br>
+                          <input type="search" name="q" id="q" placeholder="Busque Sua Midia" class="input-xxlarge" autofocus=""/>
+                          
                           {% csrf_token %}
-                          <br>
+                          
                           <button type="submit" id="submitButton" class="btn btn-large "><i class="download icon"></i> <strong>ENCONTRE</strong> <i class="magnet icon"></i> </button>
                       </form>
-
-                      <a href="Para Buscas de Vidoes, "></a>
-
 
                       {% if results %}
                       <div id="resultsDiv">
@@ -416,8 +335,8 @@ FB.getLoginStatus(function(response) {
       </div>
       </div>
       </div>
+      
            <script>
-
               // Simple elevator usage.
               var elementButton = document.querySelector('.elevator');
               var elevator = new Elevator({
@@ -425,19 +344,20 @@ FB.getLoginStatus(function(response) {
                   mainAudio: '../../static/music/elevator.mp3', // Music from http://www.bensound.com/
                   endAudio:  '../../static/music/ding.mp3'
               });
-
           </script>
 
-      <footer  id="rodape">
-          ISKRILLEX GROUP 2013 - 2016. <br/>
-          BECAUSE FREE IsUPER YUMMY!<br/>
-          <div id="divSpdInPix">
-         <figure>
-         <img src="../../static/img/Copyleft.png" title="Copyletf" alt="Copyleft"/>
-         </figure>
-        </div>
-
-      </footer>
+        <footer  id="rodape">
+              ISKRILLEX GROUP 2013 - 2016. <br/>
+              BECAUSE FREE ISUPER YUMMY!<br/>
+                <div id="divSpdInPix">
+             
+                 <figure>
+                 <img src="../../static/img/Copyleft.png" title="Copyletf" alt="Copyleft"/>
+                 </figure>
+            
+                </div>
+        
+        </footer>
 
 </body>
 </html>
