@@ -128,8 +128,9 @@
                               <img src="../../static/img/logo.png" alt="Logo Iskema" title="Logo IsKema"/>
                           </a>
                        </figure>
-                      <form class="form-horizontal" action="." method="post" id="searchForm">
-                          <div class="btn-group">
+                      <form class="form-horizontal form-search" action="." method="post" id="searchForm">
+                          
+                          <div class="btn-group ">
                               <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
                                 <i class="server icon animated infinite jello"></i>Selecione
                                   <span class="caret"></span>
@@ -279,11 +280,13 @@
                                   </li>
                               </ul>
                           </div>
+                          <div class="input-append">
                           <input type="search" name="q" id="q" placeholder="Busque Sua Midia" class="input-xxlarge" autofocus=""/>
                           
                           {% csrf_token %}
                           
-                          <button type="submit" id="submitButton" class="btn btn-default"><i class="download icon"></i> <strong>ENCONTRE</strong></button>
+                          <button type="submit" id="submitButton" class="btn btn-default span2 search-query"><i class="download icon"></i> <strong>ENCONTRE</strong></button>
+                        </div>
                       </form>
 
                       {% if results %}
