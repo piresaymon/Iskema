@@ -128,7 +128,7 @@
                               <img src="../../static/img/logo.png" alt="Logo Iskema" title="Logo IsKema"/>
                           </a>
                        </figure>
-                      <form class="form-horizontal form-search" action="." method="post" id="searchForm">
+                      <form class="form-horizontal" action="." method="post" id="searchForm">
                           
                           <div class="btn-group ">
                               <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
@@ -285,8 +285,8 @@
                           
                           {% csrf_token %}
                           
-                          <button type="submit" id="submitButton" class="btn btn-default span2 search-query"><i class="download icon"></i> <strong>ENCONTRE</strong></button>
-                        </div>
+                          <button type="submit" id="submitButton" class="btn btn-default"><i class="download icon"></i> <strong>ENCONTRE</strong></button>
+                        
                       </form>
 
                       {% if results %}
