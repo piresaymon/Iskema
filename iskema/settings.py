@@ -4,6 +4,9 @@ import os
 # Substitui dj_database_url (opcional, mas recomendado atualizar se usar)
 # import dj_database_url
 
+
+import dj_database_url
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 # Atualiza para o método recomendado no Django 3.1+
 from pathlib import Path
@@ -37,10 +40,10 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    # 'django.middleware.csrf.CsrfViewMiddleware', # Pode ser comentado se @csrf_exempt for usado, mas é recomendado
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',    
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'iskema.urls' # Certifique-se de que o nome do projeto está correto
@@ -71,10 +74,10 @@ WSGI_APPLICATION = 'iskema.wsgi.application' # Certifique-se de que o nome do pr
 
 # Exemplo para SQLite (padrão para desenvolvimento)
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.config(
+        default='postgresql://postgres:postgres@localhost:5432/iskema',
+        conn_max_age=600
+    )
 }
 
 # Se quiser usar dj_database_url com uma versão atualizada:
@@ -122,6 +125,16 @@ USE_TZ = True # Atualizado para True (recomendado)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# This production code might break development mode, so we check whether we're in DEBUG mode
+if not DEBUG:
+    # Tell Django to copy static assets into a path called `staticfiles` (this is specific to Render)
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+    # Enable the WhiteNoise storage backend, which compresses static files to reduce disk use
+    # and renames the files with unique names for each version to support long-term caching
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 # Atualiza STATIC_ROOT para usar Path
 STATIC_ROOT = BASE_DIR / 'staticfiles' # Pasta onde os arquivos são coletados para produção
 

@@ -11,8 +11,8 @@ Run locally
 
 Set up a Virtualenv and install dependencies::
 
-    python -m venv env
-    env\Scripts\activate
+    python -m venv venv
+    venv\Scripts\activate
     pip install -r requirements.txt
     python manage.py runserver 
 
