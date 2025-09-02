@@ -1,0 +1,91 @@
+Listagem de caminhos de pasta
+O número de série do volume é B285-017C
+C:.
+¦   db.sqlite3
+¦   google.py
+¦   lista_de_pastas.txt
+¦   manage.py
+¦   Procfile
+¦   README.rst
+¦   requirements.txt
+¦   __init__.py
+¦   
++---core
+¦   ¦   forms.py
+¦   ¦   util.py
+¦   ¦   views.py
+¦   ¦   __init__.py
+¦   ¦   
+¦   +---__pycache__
+¦           forms.cpython-313.pyc
+¦           util.cpython-313.pyc
+¦           views.cpython-313.pyc
+¦           __init__.cpython-313.pyc
+¦           
++---iskema
+¦   ¦   settings.py
+¦   ¦   urls.py
+¦   ¦   wsgi.py
+¦   ¦   
+¦   +---__pycache__
+¦           settings.cpython-313.pyc
+¦           urls.cpython-313.pyc
+¦           wsgi.cpython-313.pyc
+¦           
++---static
+¦   ¦   jquery-1.7.1.min.js
+¦   ¦   
+¦   +---css
+¦   ¦       base.css
+¦   ¦       bootstrap-responsive.css
+¦   ¦       bootstrap.css
+¦   ¦       rodapé.css
+¦   ¦       
+¦   +---images
+¦   ¦       fpo-picture.gif
+¦   ¦       get-started-bg.jpg
+¦   ¦       header-sketch.png
+¦   ¦       icons - Cópia.png
+¦   ¦       picture-sketch.png
+¦   ¦       samples-bg.png
+¦   ¦       shonuff.jpg
+¦   ¦       sprites.png
+¦   ¦       underconstruction.png
+¦   ¦       
+¦   +---img
+¦   ¦       arrow.png
+¦   ¦       bg.jpg
+¦   ¦       buttons.png
+¦   ¦       buttons.xcf
+¦   ¦       facebook.png
+¦   ¦       facebookover.png
+¦   ¦       favicon.ico
+¦   ¦       glyphicons-halflings-white.png
+¦   ¦       glyphicons-halflings.png
+¦   ¦       heading.png
+¦   ¦       icons - Cópia.png
+¦   ¦       icons.png
+¦   ¦       icons.xcf
+¦   ¦       logo canaval.png
+¦   ¦       logo.png
+¦   ¦       logo1.png
+¦   ¦       logodd.png
+¦   ¦       more.png
+¦   ¦       seal.png
+¦   ¦       searchBox.png
+¦   ¦       shonuff.jpg
+¦   ¦       twitter.png
+¦   ¦       twitterover.png
+¦   ¦       
+¦   +---js
+¦           bootstrap.min.js
+¦           jquery-1.7.1.min.js
+¦           script.js
+¦           
++---templates
+    +---core
+            construction.html
+            index.html
+            result.html
+            test.html
+            

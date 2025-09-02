@@ -1,37 +1,26 @@
 #!/usr/bin/env python
-# coding: utf-8
-
-import settings
-import imp
+# Arquivo: iskema/manage.py
+"""Django's command-line utility for administrative tasks."""
 import os
 import sys
 
-try:
-    import settings  # Assumed to be in the same directory.
-except ImportError:
-    import sys
-    sys.stderr.write(
-        """Error: Can't find the file 'settings.py' in the directory containing
-%r. It appears you've customized things.\n
-You'll have to run django-admin.py, passing it your settings module.
-(If the file settings.py does indeed exist, it's causing an ImportError.)\n"""
-        % __file__)
-    sys.exit(1)
 
-if __name__ == "__main__":
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "settings")
-    from django.core.management import execute_from_command_line
+def main():
+    """Run administrative tasks."""
+    # Certifique-se de que o nome do módulo de configurações está correto
+    # Deve corresponder ao nome da sua pasta principal do projeto (iskema)
+    # e ao arquivo settings.py dentro dela.
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'iskema.settings')
+    try:
+        from django.core.management import execute_from_command_line
+    except ImportError as exc:
+        raise ImportError(
+            "Couldn't import Django. Are you sure it's installed and "
+            "available on your PYTHONPATH environment variable? Did you "
+            "forget to activate a virtual environment?"
+        ) from exc
     execute_from_command_line(sys.argv)
 
-    # fix known PyPy bug (see https://bugs.pypy.org/issue1116)
-    import gc
-    gc.collect()
-    gc.collect()
 
-
-try:
-    imp.find_module('settings') # Assumed to be in the same directory.
-except ImportError:
-    import sys
-    sys.stderr.write("Error: Can't find the file 'settings.py' in the directory containing %r. It appears you've customized things.\nYou'll have to run django-admin.py, passing it your settings module.\n" % __file__)
-    sys.exit(1)
+if __name__ == '__main__':
+    main()
